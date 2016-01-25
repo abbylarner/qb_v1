@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/index.html"><img src="/images/qb_logo.png"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+            {% for nav_item in site.data.nav %}
+               {% if nav_item.type == 'main' or nav_item.type == 'Main' or nav_item.type == 'MAIN' %}
+                   {% if nav_item.url %}
+                        <li><a href="{{nav_item.url}}">{{nav_item.title}}</a></li>
+                    {% else %}
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{nav_item.title}} <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                            {% for dropdown in site.data.nav %}
+                                    {% if dropdown.group == nav_item.group and dropdown.type == 'subNav' %}
+                                         <li><a href="{{dropdown.permalink}}">{{dropdown.title}}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endif %} 
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="upper-nav-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="upper-nav clearfix">
+                    <a href="https://www.facebook.com/quintbio?ref=br_tf" target="_blank" class="social"><img src="/images/fb.png"></a>
+                    <a href="https://twitter.com/quintbio " class="social"><img src="/images/twitter.png"></a>
+                    <a href="https://plus.google.com/107968275840418469246/about?hl=en" target="_blank" class="social"><img src="/images/google.png"></a>
+                    <a href="https://www.linkedin.com/company/quintessence-biosciences-inc." target="_blank" class="social"><img src="/images/linked.png"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
