@@ -1,9 +1,11 @@
 collections:
-    technology:
-        output: true
-        defaults:
-            scope:
-                path: ""
-                type: "technology"
-            values:
-                layout: "post"
+  technology:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "technology"
+    values:
+      layout: "post"

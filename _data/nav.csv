@@ -2,8 +2,8 @@ title,type,group,url
 About Us,main,,/about-us/ 
 Product Pipeline,main,,/product-pipeline/
 Technology,main,technology,
-Evade Ribonucleases,subNav,technology,/evade-ribonucleases/
-'RNA Clearance': Immune/Inflamation,subNav,technology,/rna-clearance/
-Evade RNases as Payloads,subNav,technology,/evade-rnases/
+Evade Ribonucleases,subNav,technology,/technology/evade-ribonucleases/
+'RNA Clearance': Immune/Inflamation,subNav,technology,/technology/rna-clearance-immune-inflamation/
+Evade RNases as Payloads,subNav,technology,/technology/evade-rnases-as-payloads/
 News,main,,/news/
 Contact Us,main,contact,/contact-us/
