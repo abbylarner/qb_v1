@@ -20,7 +20,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{nav_item.title}} <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                            {% for dropdown in site.data.nav %}
+                                {% for dropdown in site.data.nav %}
                                     {% if dropdown.group == nav_item.group and dropdown.type == 'subNav' %}
                                          <li><a href="{{dropdown.permalink}}">{{dropdown.title}}</a></li>
                                     {% endif %}

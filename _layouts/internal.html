@@ -1,8 +1,7 @@
 ---
 layout: default
 ---
-<div class="hero-img">
-    <img src="{{page.heroImage}}">
+<div class="hero-img" {% if page.heroImage %}style="background: url('{{page.heroImage}}') 0 0 no-repeat; background-size: cover;"{% else %}style="background: url('/images/about.jpg') 0 0 no-repeat; background-size: cover; max-height: 200px; min-height: 200px;"{% endif %}>
     <h1 class="hero-text 900-edit" data-900-id="sdo7di">{{page.heroTitle}}</h1>
 </div>
 
