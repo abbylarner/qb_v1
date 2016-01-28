@@ -50,8 +50,10 @@ title: Home
                 <div id="eventsTitle">
                     <h2 class="editable">Upcoming Events</h2>
                     <p class="editable">See where Quintessence Biosciences is presenting in the coming months.</p>
+                    <a href="/events/">View All Upcoming Events</a>
                 </div>
-                <div class="dpi-repeat">
+                {% assign sorted_events = (site.data.events | sort: 'date' %}
+                {% for event in sorted_events limit:3 %}
                     <div class="col-sm-12 col-md-4">
                         <div class="new-event clearfix">
                             <div class="event-border">
@@ -59,46 +61,14 @@ title: Home
                             </div>
                             <div class="event-info">
                                 <p class="editable"><strong>
-                                        American Association for Cancer Research Annual Meeting<br>18-22 April 2015<br>
-                                        <a href="http://www.aacr.org/Meetings/Pages/MeetingDetail.aspx?EventItemID=25#.VS5jgJTF830" target="_blank">Agenda</a>
+                                        {{event.title}}<br>{{event.date | date: '%B %d, %Y' }}<br>
+                                        <a href="{{event.link}}" target="_blank">Agenda</a>
                                     </strong></p>
-                                <p class="editable">Quintessence Biosciences (QuintBio) will be meeting with collaborators and future partners at the AACR conference in Philadelphia.&nbsp;</p>
+                                <p class="editable">{{event.description}}</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="dpi-repeat">
-                    <div class="col-sm-12 col-md-4">
-                        <div class="new-event clearfix">
-                            <div class="event-border">
-                                <img src="/images/event_border.png">
-                            </div>
-                            <div class="event-info">
-                                <p class="editable"><strong>
-                                        <strong></strong>ASCO Annual Meeting<br>29 May - 2 June 2015<br><a href="http://am.asco.org/">Agenda</a><a href="http://events.medcitynews.com/midamerica/" target="_blank"></a>
-                                    </strong></p>
-                                <p class="editable">Quintessence Biosciences (QuintBio) will be meeting with potential development partners at the ASCO Annual Meeting in Chicago.</p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                <div class="dpi-repeat">
-                    <div class="col-sm-12 col-md-4">
-                        <div class="new-event clearfix">
-                            <div class="event-border">
-                                <img src="/images/event_border.png">
-                            </div>
-                            <div class="event-info">
-                                <p class="editable"><strong>
-                                        BIO International Convention<br>
-                                        15-18&nbsp;June 2015<br>
-                                        <a href="http://convention.bio.org/" target="_blank">Agenda</a>
-                                    </strong></p>
-                                <p class="editable">Quintessence Biosciences (QuintBio) will be meeting with potential development partners at the BIO International Convention in Philadelphia.</p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                {% endfor %}
                 </div>
         </div>
     </div>
