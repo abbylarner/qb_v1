@@ -10,6 +10,19 @@ h1,h2,h3,h4,h5,h6,p,a {
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
+.alert-success {
+    background-color: rgba(131,179,215,.25);
+    padding: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+
+}
+
+.alert-success p {
+    margin: 0;
+}
+
 .flexslider {
     max-width: 1200px;
     margin: -1px auto;
