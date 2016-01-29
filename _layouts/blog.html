@@ -5,15 +5,26 @@ layout: default
         <div class="blog-wrapper clearfix">
             <div class="row">
                 <div class="col-sm-8">
+                    {% if page.title != "Quintessence Biosciences News" %}
+                        <a href="/news/" class="news-back"> &#60; Back to News</a>
+                    {% endif %}
                     <h1 class="news-title">
                        {{page.title}}
                     </h1>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-md-offset-2">
                    {{content}}
+                   </div>
+                   </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="/events/" class="btn btn-events">View All Upcoming Events</a>
+                            {% if page.title == "Upcoming Events" %}
+                                <a href="/news/" class="btn btn-events">View All News</a>
+                            {% else %}
+                                <a href="/events/" class="btn btn-events">View All Upcoming Events</a>
+                            {% endif %}
                             <div class="press-wrapper">
                                 <h3 class="editable">Press Releases</h3>
                                 <p class="editable">

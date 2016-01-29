@@ -4,7 +4,10 @@ title: Quintessence Biosciences News
 permalink: /news/
 ---
 {% for post in site.posts %}
-    {{post.title}}
-    {{ post.excerpt }}
+<div class="news-row">
+    <h4><a href="{{post.url}}">{{post.title}}</a></h4>
+    <p class="news-date">{{post.date | date: '%B %d, %Y' }} - {{post.categories}}</p> 
+    <p>{{ post.excerpt }}</p>
     <a href="{{ post.url }}">Read More</a>
+</div>
 {% endfor %}

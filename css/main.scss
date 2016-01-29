@@ -173,10 +173,24 @@ h1,h2,h3,h4,h5,h6,p,a {
     margin-bottom: 15px;
 }
 
-.event-info a, #eventsTitle a {
+.event-info a, #eventsTitle a, .event-row a, .news-row a {
     color: #93277b;
     font-weight: bold;
+}
 
+.news-back {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    font-weight: normal;
+    color: #333;
+}
+
+a.news-back:hover,
+a.news-back:focus,
+a.news-back:active {
+    color: #333;
+    text-decoration: underline;
 }
 
 .event-info a:hover,
@@ -184,7 +198,15 @@ h1,h2,h3,h4,h5,h6,p,a {
 .event-info a:active,
 #eventsTitle a:hover,
 #eventsTitle a:focus,
-#eventsTitle a:active {
+#eventsTitle a:active,
+.event-row a:hover,
+.event-row a:focus,
+.event-row a:active,
+.news-row a:hover,
+.news-row a:focus,
+.news-row a:active
+ {
+     color: #93277b;
     text-decoration: underline;
 }
 
@@ -440,6 +462,10 @@ h1.ppline {
     color: #999;
 }
 
+.blog-wrapper img {
+    max-width: 100%;
+}
+
 .news-title {
     font-size: 28px;
     color: #93277b;
@@ -447,7 +473,7 @@ h1.ppline {
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .press-wrapper {
@@ -518,6 +544,9 @@ h1.ppline {
 .success-text {
     text-align: center;
 }
+
+
+
 @media (min-width: 768px){
 
     .navbar {
@@ -578,7 +607,45 @@ h1.ppline {
         display: block;
         margin-top: 20px;
     }
+    
+    .event-row, .news-row {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
 
+    .event-row:last-child, .news-row:last-child {
+        border-bottom: 0;
+    }
+
+    .event-row h4 {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .news-row h4, .news-row h4 a {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .event-row h4 + p {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .news-date {
+        color: #999;
+    }
+
+    .event-row p {
+        max-width: 300px;
+    }
+
+    .event-row a, .news-row a {
+        margin-bottom: 5px;
+        display: inline-block;
+    }
     
 
 }
